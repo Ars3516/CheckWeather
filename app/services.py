@@ -2,6 +2,7 @@ import requests
 from flask import jsonify
 from .config import Config
 
+
 def get_weather_data(city=None, lat=None, lon=None):
     if city:
         url = f"{Config.WEATHERBIT_BASE_URL}/current?city={city}&key={Config.WEATHERBIT_API_KEY}"
