@@ -1,0 +1,13 @@
+GET http://localhost:5000/api/v1/weather/forecast/cities/Barnaul
+
+###
+GET http://127.0.0.1:5000/api/v1/weather/cities/London
+
+###
+GET http://127.0.0.1:5000/api/v1/api/v1/weather/coordinates
+Content-Type: application/json
+
+{
+    "lat": 51.5074,
+    "lon": "-0.1278"
+}

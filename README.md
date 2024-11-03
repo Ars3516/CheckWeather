@@ -1,31 +1,31 @@
-Dependencies
-1.Flask - Web framework for building the API
-2/requests - For making HTTP requests to the Weatherbit API
-3.python-dotenv - For managing environment variables
+# Flask Weather API
 
-This Flask application serves as a weather data API, leveraging the Weatherbit API to provide current weather and 7-day forecast data. It has three main endpoints to fetch weather information by city name or geographic coordinates.
+## Project Description
 
-Features
-1.Current Weather by City: Retrieves the current weather data for a specified city.
-2.Current Weather by Coordinates: Retrieves the current weather data using latitude and longitude coordinates.
-3.7-Day Forecast by City: Provides a 7-day forecast for a specified city.
+Flask Weather API is a RESTful web service built using Flask that provides current weather data and 7-day weather forecasts from the Weatherbit API. This application allows users to fetch weather information by city name or geographical coordinates. It supports API versioning and implements structured error handling to ensure smooth interactions with clients.
 
-API Endpoints
-1. Get Current Weather by City
-Endpoint: /weather/city
-Method: GET
-Parameters:
-city (required): Name of the city.
+## API Endpoints
 
-Get Current Weather by Coordinates
-Endpoint: /weather/coordinates
-Method: GET
-Parameters:
-lat (required): Latitude of the location.
-lon (required): Longitude of the location.
+### Current Weather
 
-Get 7-Day Forecast by City
-Endpoint: /weather/forecast
-Method: GET
-Parameters:
-city (required): Name of the city.
+- **GET `/api/v1/weather/cities/<city>`**
+  - Retrieve the current weather for the specified city.
+  - **Path Parameters**:
+    - `city`: The name of the city for which to retrieve weather information.
+  
+### Current Weather by Coordinates
+
+- **GET `/api/v1/weather/coordinates/<float:lat>/<float:lon>`**
+  - Retrieve the current weather for the specified geographical coordinates.
+  - **Path Parameters**:
+    - `lat`: Latitude of the location.
+    - `lon`: Longitude of the location.
+
+### 7-Day Weather Forecast
+
+- **GET `/api/v1/weather/forecast/cities/<city>`**
+  - Retrieve a 7-day weather forecast for the specified city.
+  - **Path Parameters**:
+    - `city`: The name of the city for which to retrieve the forecast.
+
+
